@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Controle do Espelho</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --bg: #0d0d0d; --text: #ffffff; --accent: #1db954; --accent-hover: #1ed760; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); padding: 20px; padding-bottom: 50px; }
+        
+        .header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .header h1 { font-size: 1.5rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .header h1 i { color: var(--accent); }
+        .status { font-size: 0.8rem; color: #aaa; margin-top: 5px; }
+
+        .config-section-title { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); margin: 25px 0 12px 0; display: flex; align-items: center; gap: 8px; }
+        .config-group { margin-bottom: 18px; background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.02); }
+        .config-group label { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 12px; opacity: 0.9; }
+        
+        /* Sliders */
+        .range-slider { width: 100%; accent-color: var(--accent); cursor: pointer; height: 6px; border-radius: 4px; }
+        
+        /* Select */
+        .select-input { width: 100%; background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 12px; border-radius: 8px; font-size: 1rem; outline: none; transition: border 0.3s; }
+        .select-input:focus { border-color: var(--accent); }
+        
+        /* Toggles */
+        .toggle-item { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(255,255,255,0.03); border-radius: 8px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.02); }
+        .toggle-item span { font-size: 0.95rem; font-weight: 500; }
+        .toggle-item p { font-size: 0.75rem; color: #888; margin-top: 4px; }
+        .switch { position: relative; display: inline-block; width: 52px; height: 28px; flex-shrink: 0; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.2); transition: .3s; border-radius: 28px; }
+        .slider:before { position: absolute; content: ""; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .3s; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+        input:checked + .slider { background-color: var(--accent); }
+        input:checked + .slider:before { transform: translateX(24px); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1><i class="fa-solid fa-mobile-screen-button"></i> Mirror Control</h1>
+        <div class="status" id="status-text">Conectando...</div>
+    </div>
+
+    <div id="app-content" style="opacity: 0.4; pointer-events: none; transition: opacity 0.3s;">
+        
+        <div class="config-section-title"><i class="fa-solid fa-desktop"></i> Exibição Principal</div>
+        
+        <div class="toggle-item">
+            <div>
+                <span>Modo Eco (Escuro)</span>
+                <p>Reduz o brilho da tela para a noite</p>
+            </div>
+            <label class="switch"><input type="checkbox" id="toggle-eco-mode"><span class="slider"></span></label>
+        </div>
+
+        <div class="toggle-item">
+            <div>
+                <span>Relógio Gigante no Topo</span>
+                <p>Relógio e data grandes no centro</p>
+            </div>
+            <label class="switch"><input type="checkbox" id="toggle-big-clock"><span class="slider"></span></label>
+        </div>
+
+        <div class="config-section-title"><i class="fa-brands fa-spotify"></i> Modo Spotify</div>
+        <div class="config-group">
+            <label style="margin-bottom: 5px;">Modo de Visualização Central:</label>
+            <select id="select-spotify-mode" class="select-input" style="margin-bottom: 20px;">
+                <option value="standard">Nenhum (Só barra inferior)</option>
+                <option value="vinyl">Toca-Discos (Vinil Girando)</option>
+                <option value="animated">Capa Animada (Flutuando)</option>
+                <option value="large-cover">Card Lateral (Destaque)</option>
+            </select>
+            
+            <label>Tamanho do Vinil / Capa: <span id="val-vinyl">100%</span></label>
+            <input type="range" id="range-vinyl" class="range-slider" min="60" max="180" value="100">
+        </div>
+
+        <div class="config-section-title"><i class="fa-solid fa-layer-group"></i> Barra Inferior</div>
+        <div class="toggle-item"><span>Exibir Clima Atual</span><label class="switch"><input type="checkbox" id="toggle-temp"><span class="slider"></span></label></div>
+        <div class="toggle-item"><span>Exibir Mini Player Spotify</span><label class="switch"><input type="checkbox" id="toggle-spotify"><span class="slider"></span></label></div>
+        <div class="toggle-item"><span>Exibir Mini Relógio</span><label class="switch"><input type="checkbox" id="toggle-clock"><span class="slider"></span></label></div>
+        <div class="toggle-item"><span>Exibir Previsão 4 Dias</span><label class="switch"><input type="checkbox" id="toggle-forecast"><span class="slider"></span></label></div>
+        
+        <div class="config-section-title"><i class="fa-solid fa-droplet"></i> Estilo dos Cards (Vidro)</div>
+        <div class="config-group"><label>Transparência: <span id="val-opacity">3%</span></label><input type="range" id="range-opacity" class="range-slider" min="0" max="40" value="3"></div>
+        <div class="config-group"><label>Desfoque (Blur): <span id="val-blur">10px</span></label><input type="range" id="range-blur" class="range-slider" min="0" max="25" value="10"></div>
+        <div class="config-group"><label>Arredondamento: <span id="val-radius">16px</span></label><input type="range" id="range-radius" class="range-slider" min="4" max="30" value="16"></div>
+        
+        <div class="config-section-title"><i class="fa-solid fa-text-height"></i> Tamanhos Globais</div>
+        <div class="config-group"><label>Textos da Barra: <span id="val-text">115%</span></label><input type="range" id="range-text" class="range-slider" min="80" max="160" value="115"></div>
+        <div class="config-group"><label>Ícones do Clima: <span id="val-icon">115%</span></label><input type="range" id="range-icon" class="range-slider" min="80" max="160" value="115"></div>
+        <div class="config-group"><label>Tamanho Mini Player: <span id="val-spotify-scale">100%</span></label><input type="range" id="range-spotify-scale" class="range-slider" min="70" max="150" value="100"></div>
+        
+        <div class="config-section-title"><i class="fa-solid fa-gear"></i> Sistema Automático</div>
+        <div class="toggle-item">
+            <div>
+                <span>Modo Noturno Automático</span>
+                <p>Escurece levemente após às 22h</p>
+            </div>
+            <label class="switch"><input type="checkbox" id="toggle-night-mode"><span class="slider"></span></label>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+        // SUAS CHAVES DO FIREBASE
+        const firebaseConfig = {
+            apiKey: "AIzaSyD9uRiFDp3WZEg9BHjpN9QBszL1L7zY6qc",
+            authDomain: "mirror-3bd2e.firebaseapp.com",
+            databaseURL: "https://mirror-3bd2e-default-rtdb.firebaseio.com",
+            projectId: "mirror-3bd2e",
+            storageBucket: "mirror-3bd2e.firebasestorage.app",
+            messagingSenderId: "172125779031",
+            appId: "1:172125779031:web:1bb19ae1fe89d71cafdf12"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const settingsRef = ref(db, 'mirror_config');
+
+        // VALORES PADRÃO (Mesmo do index.html)
+        const defaultConfig = { 
+            textScale: 115, iconScale: 115, spotifyScale: 100, vinylSize: 100, spotifyMode: 'standard', 
+            glassOpacity: 3, glassBlur: 10, cardRadius: 16, 
+            showTemp: true, showSpotify: true, showClock: true, showForecast: true, 
+            autoNightMode: false, ecoMode: false, showBigClock: false 
+        };
+
+        let isUpdatingUI = false; 
+        let currentState = {};
+        let debounceTimer;
+
+        onValue(settingsRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                currentState = { ...defaultConfig, ...data };
+                updateUI(currentState);
+                document.getElementById('status-text').innerHTML = "<span style='color:var(--accent)'><i class='fa-solid fa-circle-check'></i> Sincronizado e Pronto</span>";
+                document.getElementById('app-content').style.opacity = "1";
+                document.getElementById('app-content').style.pointerEvents = "auto";
+            }
+        });
+
+        function updateUI(settings) {
+            isUpdatingUI = true;
+            document.getElementById('range-opacity').value = settings.glassOpacity; document.getElementById('val-opacity').textContent = settings.glassOpacity + '%';
+            document.getElementById('range-blur').value = settings.glassBlur; document.getElementById('val-blur').textContent = settings.glassBlur + 'px';
+            document.getElementById('range-radius').value = settings.cardRadius; document.getElementById('val-radius').textContent = settings.cardRadius + 'px';
+            document.getElementById('range-text').value = settings.textScale; document.getElementById('val-text').textContent = settings.textScale + '%';
+            document.getElementById('range-icon').value = settings.iconScale; document.getElementById('val-icon').textContent = settings.iconScale + '%';
+            
+            // Sliders do Spotify
+            document.getElementById('range-spotify-scale').value = settings.spotifyScale; document.getElementById('val-spotify-scale').textContent = settings.spotifyScale + '%';
+            document.getElementById('range-vinyl').value = settings.vinylSize; document.getElementById('val-vinyl').textContent = settings.vinylSize + '%';
+            
+            document.getElementById('select-spotify-mode').value = settings.spotifyMode;
+            
+            document.getElementById('toggle-temp').checked = settings.showTemp;
+            document.getElementById('toggle-spotify').checked = settings.showSpotify;
+            document.getElementById('toggle-clock').checked = settings.showClock;
+            document.getElementById('toggle-forecast').checked = settings.showForecast;
+            
+            // Novos Toggles
+            document.getElementById('toggle-night-mode').checked = settings.autoNightMode;
+            document.getElementById('toggle-eco-mode').checked = settings.ecoMode;
+            document.getElementById('toggle-big-clock').checked = settings.showBigClock;
+            
+            isUpdatingUI = false;
+        }
+
+        function pushChangesToFirebase() {
+            if(isUpdatingUI) return;
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => { set(settingsRef, currentState); }, 50);
+        }
+
+        // Eventos de Input (Sliders)
+        ['range-opacity', 'range-blur', 'range-radius', 'range-text', 'range-icon', 'range-spotify-scale', 'range-vinyl'].forEach(id => {
+            document.getElementById(id).addEventListener('input', (e) => { 
+                const key = id.replace('range-', '');
+                
+                // Mapeamento correto das variáveis
+                let stateKey = key;
+                if(key === 'opacity') stateKey = 'glassOpacity';
+                if(key === 'blur') stateKey = 'glassBlur';
+                if(key === 'radius') stateKey = 'cardRadius';
+                if(key === 'text') stateKey = 'textScale';
+                if(key === 'icon') stateKey = 'iconScale';
+                if(key === 'spotify-scale') stateKey = 'spotifyScale';
+                if(key === 'vinyl') stateKey = 'vinylSize';
+
+                currentState[stateKey] = e.target.value; 
+                document.getElementById('val-' + key).textContent = e.target.value + (key === 'blur' || key === 'radius' ? 'px' : '%');
+                pushChangesToFirebase();
+            });
+        });
+
+        // Evento Select
+        document.getElementById('select-spotify-mode').addEventListener('change', (e) => { 
+            currentState.spotifyMode = e.target.value; pushChangesToFirebase(); 
+        });
+
+        // Eventos Switch
+        ['toggle-temp', 'toggle-spotify', 'toggle-clock', 'toggle-forecast', 'toggle-night-mode', 'toggle-eco-mode', 'toggle-big-clock'].forEach(id => {
+            document.getElementById(id).addEventListener('change', (e) => {
+                const key = id.replace('toggle-', '');
+                
+                let stateKey = key;
+                if(key === 'temp') stateKey = 'showTemp';
+                if(key === 'spotify') stateKey = 'showSpotify';
+                if(key === 'clock') stateKey = 'showClock';
+                if(key === 'forecast') stateKey = 'showForecast';
+                if(key === 'night-mode') stateKey = 'autoNightMode';
+                if(key === 'eco-mode') stateKey = 'ecoMode';
+                if(key === 'big-clock') stateKey = 'showBigClock';
+
+                currentState[stateKey] = e.target.checked;
+                pushChangesToFirebase();
+            });
+        });
+    </script>
+</body>
+</html>
