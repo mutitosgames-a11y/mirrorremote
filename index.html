@@ -16,15 +16,13 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
 .preview-frame iframe{display:block;width:100%;height:100%;border:0;background:#000}
 .message-box{margin-top:9px;padding:11px;border-radius:22px}.composer{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}.message-input{min-width:0;min-height:58px;max-height:150px;resize:none;border:1px solid rgba(255,255,255,.09);background:rgba(0,0,0,.16);border-radius:16px;color:#fff;padding:11px 12px;font-size:.88rem;outline:none}.message-input::placeholder{color:rgba(255,255,255,.28)}
 .action-col{display:grid;gap:7px}.btn{width:44px;height:44px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;background:rgba(255,255,255,.06);color:#fff;cursor:pointer}.btn.primary{background:#fff;color:#111;border-color:#fff}.btn.danger{color:var(--danger);background:rgba(255,120,132,.08)}.meta-row{display:flex;justify-content:space-between;align-items:center;margin-top:7px;padding:0 2px;color:var(--muted);font-size:.6rem}.meta-row strong{color:#fff;font-weight:600}.duration-row{margin-top:10px;padding-top:9px;border-top:1px solid rgba(255,255,255,.055)}.duration-label{display:flex;justify-content:space-between;font-size:.64rem;color:var(--muted);margin-bottom:5px}.duration-value{color:#fff;font-weight:600}.range{width:100%;accent-color:#fff;height:22px;cursor:pointer;touch-action:pan-x}.duration-picker{display:grid;grid-template-columns:112px 1fr;gap:8px;align-items:center}.duration-unit{width:100%;height:38px;border-radius:12px;background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.1);padding:0 10px;outline:none}
-/* Dropdown Menu Branco resolvido */
 .duration-unit option, select.duration-unit { background-color: #151515 !important; color: #ffffff !important; }
-
-.section-title{margin:16px 3px 8px;font-size:.64rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.quick{border-radius:19px;padding:11px;min-height:78px;text-align:left;color:#fff;cursor:pointer}.quick:active,.setting:active,.choice:active,.btn:active{transform:scale(.985)}.quick-head{display:flex;align-items:center;justify-content:space-between;color:rgba(255,255,255,.78)}.quick-state{font-size:.52rem;padding:3px 6px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted)}.quick.active .quick-state{background:rgba(117,230,160,.10);color:var(--success)}.quick b{display:block;margin-top:12px;font-size:.68rem;font-weight:650}.quick small{display:block;margin-top:3px;font-size:.53rem;color:var(--muted)}
+.section-title{margin:16px 3px 8px;font-size:.64rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.quick-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.quick{border-radius:19px;padding:11px;min-height:78px;text-align:left;color:#fff;cursor:pointer}.quick:active,.setting:active,.choice:active,.btn:active{transform:scale(.985)}.quick-head{display:flex;align-items:center;justify-content:space-between;color:rgba(255,255,255,.78)}.quick-state{font-size:.52rem;padding:3px 6px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted)}.quick.active .quick-state{background:rgba(117,230,160,.10);color:var(--success)}.quick b{display:block;margin-top:12px;font-size:.68rem;font-weight:650}.quick small{display:block;margin-top:3px;font-size:.53rem;color:var(--muted); line-height: 1.1;}
 .settings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.setting{display:block;width:100%;min-height:76px;text-align:left;border-radius:19px;padding:12px;color:#fff;cursor:pointer}.setting-icon{width:29px;height:29px;display:grid;place-items:center;border-radius:10px;background:rgba(255,255,255,.06);font-size:.72rem;margin-bottom:9px}.setting b{display:block;font-size:.69rem;font-weight:650}.setting span{display:block;margin-top:3px;font-size:.55rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sheet{position:fixed;inset:0;z-index:50;display:none;align-items:flex-end;background:rgba(0,0,0,.46);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.sheet.open{display:flex}.sheet-card{width:min(760px,100%);max-height:82vh;overflow:auto;margin:auto auto 0;border-radius:28px 28px 0 0;background:rgba(16,16,16,.92);border:1px solid var(--line);border-bottom:0;box-shadow:0 -30px 80px rgba(0,0,0,.5);padding:9px 15px calc(18px + var(--safe));backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}.handle{width:40px;height:4px;background:rgba(255,255,255,.17);border-radius:99px;margin:3px auto 13px}.sheet-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.sheet-head b{font-size:.9rem}.close{width:35px;height:35px;border:0;border-radius:50%;background:rgba(255,255,255,.07);color:#fff}.field{margin:12px 0}.field-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;color:var(--muted);font-size:.67rem}.field-value{color:#fff;font-weight:600}.select{width:100%;padding:11px;border-radius:14px;background:#111;color:#fff;border:1px solid var(--line);outline:none}.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}.choice{padding:12px;border-radius:16px;text-align:left;color:#fff;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);cursor:pointer}.choice.active{background:rgba(255,255,255,.11);outline:1px solid rgba(255,255,255,.26)}.choice b{display:block;font-size:.68rem}.choice span{display:block;margin-top:3px;font-size:.55rem;color:var(--muted)}.switch-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.055)}.switch-row:last-child{border-bottom:0}.copy b{display:block;font-size:.68rem}.copy span{display:block;margin-top:3px;font-size:.55rem;color:var(--muted)}.switch{width:48px;height:27px;position:relative;flex:0 0 auto}.switch input{position:absolute;opacity:0}.switch-ui{position:absolute;inset:0;border-radius:99px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.08);transition:.22s}.switch-ui:after{content:"";position:absolute;left:3px;top:3px;width:19px;height:19px;background:#fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.4);transition:.22s}.switch input:checked+.switch-ui{background:var(--success)}.switch input:checked+.switch-ui:after{transform:translateX(21px)}
 .toast{position:fixed;left:50%;bottom:22px;z-index:80;transform:translate(-50%,15px);opacity:0;pointer-events:none;padding:9px 13px;border-radius:999px;background:rgba(18,18,18,.78);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.86);font-size:.72rem;backdrop-filter:blur(16px);transition:.28s}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:600px){body{padding-left:7px;padding-right:7px}.preview-shell{padding:5px;border-radius:23px}.preview-frame{aspect-ratio:10/7;min-height:220px;border-radius:18px}.quick-grid{grid-template-columns:1fr 1fr}.settings-grid{grid-template-columns:1fr 1fr}.composer{grid-template-columns:1fr}.action-col{grid-template-columns:1fr 1fr}.btn{width:100%;height:44px}.message-input{min-height:70px}.choices{grid-template-columns:1fr 1fr}.duration-picker{grid-template-columns:96px 1fr}}
-@media(max-width:380px){.settings-grid{grid-template-columns:1fr}.preview-frame{min-height:205px}.choice{padding:10px}}
+@media(max-width:650px){.quick-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:450px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
 </style>
 </head>
 <body>
@@ -56,10 +54,11 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
 
   <div class="section-title">Ações rápidas</div>
   <section class="quick-grid">
-    <button class="glass quick" id="quick-eco"><div class="quick-head"><i class="fa-regular fa-moon"></i><span class="quick-state" id="eco-state">OFF</span></div><b>Modo Eco</b><small>Escurecer tela</small></button>
-    <button class="glass quick" id="quick-clock"><div class="quick-head"><i class="fa-regular fa-clock"></i><span class="quick-state" id="clock-state">ON</span></div><b>Relógio</b><small>Mostrar / ocultar</small></button>
-    <button class="glass quick" id="quick-footer"><div class="quick-head"><i class="fa-solid fa-layer-group"></i><span class="quick-state" id="footer-state">ON</span></div><b>Barra inferior</b><small>Mostrar / ocultar</small></button>
-    <button class="glass quick" id="quick-bigclock"><div class="quick-head"><i class="fa-solid fa-expand"></i><span class="quick-state" id="bigclock-state">OFF</span></div><b>Hora grande</b><small>Destaque no topo</small></button>
+    <button class="glass quick" id="quick-eco"><div class="quick-head"><i class="fa-regular fa-moon"></i><span class="quick-state" id="eco-state">OFF</span></div><b>Modo Eco</b><small>Escurecer</small></button>
+    <button class="glass quick" id="quick-immersion"><div class="quick-head"><i class="fa-solid fa-cloud-rain"></i><span class="quick-state" id="immersion-state">OFF</span></div><b>Imersão</b><small>Efeitos de Clima</small></button>
+    <button class="glass quick" id="quick-clock"><div class="quick-head"><i class="fa-regular fa-clock"></i><span class="quick-state" id="clock-state">ON</span></div><b>Relógio</b><small>Barra Info</small></button>
+    <button class="glass quick" id="quick-footer"><div class="quick-head"><i class="fa-solid fa-layer-group"></i><span class="quick-state" id="footer-state">ON</span></div><b>Barra Base</b><small>Visibilidade</small></button>
+    <button class="glass quick" id="quick-bigclock"><div class="quick-head"><i class="fa-solid fa-expand"></i><span class="quick-state" id="bigclock-state">OFF</span></div><b>Hora Topo</b><small>Gigante</small></button>
   </section>
 
   <div class="section-title">Configurações</div>
@@ -90,7 +89,6 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body, html { width: 100%; height: 100%; overflow: hidden; background-color: #000; color: var(--text-color); font-family: var(--font-family); cursor: default; transition: filter 0.8s ease; }
         
-        /* MODO ECO (Escurece toda a tela) */
         body.eco-mode { filter: brightness(0.35); }
         
         #bg-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; }
@@ -98,21 +96,55 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
         .bg-layer.active { opacity: 1; }
         #bg-spotify { z-index: 3; filter: blur(35px) brightness(0.4); transform: scale(1.15); }
         
-        .mirror-container { display: flex; flex-direction: column; justify-content: flex-end; height: 100vh; padding: 1.5rem; position: relative; z-index: 2; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%); transition: filter 0.5s ease; width: 100%; max-width: 100%; }
+        /* OVERLAY DE IMERSÃO CLIMÁTICA */
+        .weather-overlay { position: absolute; inset: 0; z-index: 4; pointer-events: none; opacity: 0; transition: opacity 1s ease; }
+        .weather-overlay.active { opacity: 1; }
+        /* Chuva (Rain) */
+        .weather-overlay.rain {
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.4));
+            background-size: 2px 80px;
+            background-repeat: repeat;
+            animation: rainFall 0.7s linear infinite;
+        }
+        @keyframes rainFall { 0% { background-position: 0% 0%, 20% -50%; } 100% { background-position: 10% 100vh, 30% 120vh; } }
+        /* Neve (Snow) */
+        .weather-overlay.snow {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.8) 2px, transparent 2px);
+            background-size: 80px 80px;
+            animation: snowFall 4s linear infinite;
+        }
+        @keyframes snowFall { 0% { background-position: 0px 0px, 40px 40px; } 100% { background-position: 20px 100vh, 60px 100vh; } }
+        /* Neblina (Fog) */
+        .weather-overlay.fog {
+            background: rgba(255,255,255,0.15);
+            filter: blur(20px);
+            animation: fogDrift 15s ease-in-out infinite alternate;
+        }
+        @keyframes fogDrift { 0% { opacity: 0.3; transform: scale(1); } 100% { opacity: 0.7; transform: scale(1.1) translateX(20px); } }
+
+        .mirror-container { display: flex; flex-direction: column; justify-content: flex-end; height: 100vh; padding: 1.5rem; position: relative; z-index: 5; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%); transition: filter 0.5s ease; width: 100%; max-width: 100%; }
         
-        /* NOVO: RELÓGIO GIGANTE NO TOPO */
         #big-clock-container { position: absolute; top: 6%; left: 50%; transform: translateX(-50%); text-align: center; z-index: 15; text-shadow: 0 5px 20px rgba(0,0,0,0.9); opacity: 1; transition: opacity 0.5s ease; }
         .big-time { font-size: calc(7.5rem * var(--text-scale)); font-weight: 200; letter-spacing: -3px; line-height: 1; }
         .big-date { font-size: calc(1.5rem * var(--text-scale)); font-weight: 400; opacity: 0.85; margin-top: 8px; text-transform: capitalize; }
         
-        /* NOVO: CAPA ANIMADA (Flutuando) */
+        /* 1. CAPA ANIMADA SIMPLES */
         .animated-cover-wrapper { position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%) scale(var(--vinyl-scale)); z-index: 10; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease; }
         .animated-cover-img { width: 420px; height: 420px; border-radius: 12px; animation: floatPulse 6s ease-in-out infinite; }
-        @keyframes floatPulse {
-            0% { transform: translateY(0) scale(1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 60px rgba(255,255,255,0.05); }
-            50% { transform: translateY(-20px) scale(1.03); box-shadow: 0 45px 80px rgba(0,0,0,1), 0 0 100px rgba(255,255,255,0.15); }
-            100% { transform: translateY(0) scale(1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 60px rgba(255,255,255,0.05); }
-        }
+        
+        /* 2. CAPA ANIMADA + PROGRESSO (NOVO) */
+        .progress-player-wrapper { position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%) scale(var(--vinyl-scale)); z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.8s ease; width: 440px; }
+        .progress-cover-glow { position: relative; width: 420px; height: 420px; border-radius: 12px; animation: floatPulse 6s ease-in-out infinite; box-shadow: 0 30px 60px rgba(0,0,0,0.9); }
+        /* Efeito de Aura (Glow) por trás da capa */
+        .progress-cover-glow::before { content: ""; position: absolute; inset: -15px; border-radius: 20px; background: inherit; filter: blur(30px) saturate(150%) brightness(0.8); opacity: 0.6; z-index: -1; animation: pulseGlow 4s ease-in-out infinite alternate; }
+        .progress-cover { width: 100%; height: 100%; border-radius: 12px; object-fit: cover; position: relative; z-index: 1; }
+        .progress-ui { width: 400px; margin-top: 35px; display: flex; align-items: center; gap: 15px; background: rgba(0,0,0,0.4); padding: 12px 20px; border-radius: 99px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .time-text { font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.8); width: 40px; text-align: center; }
+        .progress-bar-bg { flex: 1; height: 6px; background: rgba(255,255,255,0.15); border-radius: 99px; overflow: hidden; position: relative; }
+        .progress-bar-fill { height: 100%; background: #fff; width: 0%; border-radius: 99px; transition: width 1s linear; box-shadow: 0 0 10px rgba(255,255,255,0.8); }
+        
+        @keyframes floatPulse { 0% { transform: translateY(0) scale(1); } 50% { transform: translateY(-15px) scale(1.02); } 100% { transform: translateY(0) scale(1); } }
+        @keyframes pulseGlow { 0% { opacity: 0.4; transform: scale(0.95); } 100% { opacity: 0.75; transform: scale(1.05); } }
 
         /* TOCA DISCOS */
         .turntable-wrapper { position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%) scale(var(--vinyl-scale)); z-index: 10; width: 480px; height: 480px; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
@@ -128,7 +160,7 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
         .config-hidden { opacity: 0; pointer-events: none; display: none !important; }
 
         /* CARD INFERIOR E RODAPÉ */
-        .footer { width: 100%; text-shadow: var(--shadow); position: relative; z-index: 5; }
+        .footer { width: 100%; text-shadow: var(--shadow); position: relative; z-index: 15; }
         .glass-card { background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); border-radius: var(--card-radius); padding: 12px 22px; margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 15px; width: 100%; max-width: 100%; overflow: hidden; transition: background 0.3s ease, border-color 0.3s ease; }
         .temp-main { font-size: calc(2.4rem * var(--text-scale)); font-weight: 300; display: flex; align-items: center; gap: 10px; line-height: 1; flex-shrink: 0; white-space: nowrap; }
         .temp-main i { font-size: calc(1.7rem * var(--icon-scale)); opacity: 0.9; }
@@ -163,109 +195,19 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
             .spotify-cover { width: calc(32px * var(--icon-scale)); height: calc(32px * var(--icon-scale)); }
             .forecast-grid { gap: 6px; }
             .forecast-day { padding: 8px 4px; }
-            .forecast-day i { font-size: calc(1rem * var(--icon-scale)); }
-            .forecast-day .temps { font-size: calc(0.75rem * var(--text-scale)); }
-            .turntable-wrapper, .animated-cover-wrapper { transform: translate(-50%, -50%) scale(calc(var(--vinyl-scale) * 0.55)); }
+            .turntable-wrapper, .animated-cover-wrapper, .progress-player-wrapper { transform: translate(-50%, -50%) scale(calc(var(--vinyl-scale) * 0.55)); }
             .big-time { font-size: calc(5rem * var(--text-scale)); }
         }
 
-        /* =========================================================
-           EXPERIÊNCIA INTERATIVA — MENSAGENS / HUD
-           ========================================================= */
-        #mirror-message-layer {
-            position: fixed;
-            inset: 0;
-            z-index: 50;
-            pointer-events: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5vw;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity .45s ease, visibility .45s ease;
-        }
+        #mirror-message-layer { position: fixed; inset: 0; z-index: 50; pointer-events: none; display: flex; align-items: center; justify-content: center; padding: 5vw; opacity: 0; visibility: hidden; transition: opacity .45s ease, visibility .45s ease; }
         #mirror-message-layer.visible { opacity: 1; visibility: visible; }
-        .mirror-message-card {
-            width: min(780px, 88vw);
-            text-align: center;
-            padding: 26px 34px 24px;
-            border-radius: 28px;
-            background: rgba(255,255,255,.055);
-            border: 1px solid rgba(255,255,255,.12);
-            box-shadow: 0 30px 90px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
-            backdrop-filter: blur(22px) saturate(135%);
-            -webkit-backdrop-filter: blur(22px) saturate(135%);
-            transform: translateY(22px) scale(.97);
-            transition: transform .55s cubic-bezier(.22,1,.36,1);
-        }
-        #mirror-message-layer.visible .mirror-message-card {
-            transform: translateY(0) scale(1);
-        }
-        .mirror-message-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 7px 11px;
-            margin-bottom: 14px;
-            border-radius: 999px;
-            background: rgba(255,255,255,.07);
-            color: rgba(255,255,255,.72);
-            font-size: .72rem;
-            letter-spacing: .11em;
-            text-transform: uppercase;
-        }
-        .mirror-message-label i { font-size: .7rem; opacity: .8; }
-        #mirror-message-text {
-            font-size: clamp(1.35rem, 3vw, 2.55rem);
-            line-height: 1.18;
-            font-weight: 350;
-            letter-spacing: -.02em;
-            text-shadow: 0 6px 30px rgba(0,0,0,.5);
-            word-break: break-word;
-        }
-        .mirror-message-progress {
-            height: 2px;
-            width: 100%;
-            margin-top: 20px;
-            border-radius: 999px;
-            overflow: hidden;
-            background: rgba(255,255,255,.08);
-        }
-        #mirror-message-progress-bar {
-            width: 100%;
-            height: 100%;
-            transform-origin: left center;
-            background: rgba(255,255,255,.62);
-        }
+        .mirror-message-card { width: min(780px, 88vw); text-align: center; padding: 26px 34px 24px; border-radius: 28px; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 30px 90px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06); backdrop-filter: blur(22px) saturate(135%); -webkit-backdrop-filter: blur(22px) saturate(135%); transform: translateY(22px) scale(.97); transition: transform .55s cubic-bezier(.22,1,.36,1); }
+        #mirror-message-layer.visible .mirror-message-card { transform: translateY(0) scale(1); }
+        .mirror-message-label { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; margin-bottom: 14px; border-radius: 999px; background: rgba(255,255,255,.07); color: rgba(255,255,255,.72); font-size: .72rem; letter-spacing: .11em; text-transform: uppercase; }
+        #mirror-message-text { font-size: clamp(1.35rem, 3vw, 2.55rem); line-height: 1.18; font-weight: 350; letter-spacing: -.02em; text-shadow: 0 6px 30px rgba(0,0,0,.5); word-break: break-word; }
+        .mirror-message-progress { height: 2px; width: 100%; margin-top: 20px; border-radius: 999px; overflow: hidden; background: rgba(255,255,255,.08); }
+        #mirror-message-progress-bar { width: 100%; height: 100%; transform-origin: left center; background: rgba(255,255,255,.62); }
         .message-soft-dim #bg-container { filter: brightness(.72); transition: filter .5s ease; }
-        @media (max-width:650px) {
-            .mirror-message-card { padding: 20px 20px 18px; border-radius: 22px; }
-            #mirror-message-text { font-size: clamp(1.15rem, 6vw, 1.9rem); }
-        }
-
-        /* pequenos atalhos visuais discretos */
-        #mirror-toast {
-            position: fixed;
-            left: 50%;
-            bottom: 28px;
-            z-index: 60;
-            transform: translate(-50%, 18px);
-            opacity: 0;
-            visibility: hidden;
-            padding: 9px 13px;
-            border-radius: 999px;
-            background: rgba(20,20,20,.62);
-            border: 1px solid rgba(255,255,255,.09);
-            color: rgba(255,255,255,.8);
-            font-size: .76rem;
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            transition: .35s ease;
-            pointer-events: none;
-        }
-        #mirror-toast.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
-
     </style>
 </head>
 <body>
@@ -274,6 +216,7 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
         <div id="bg1" class="bg-layer active"></div>
         <div id="bg2" class="bg-layer"></div>
         <div id="bg-spotify" class="bg-layer"></div>
+        <div id="weather-effect-layer" class="weather-overlay"></div>
     </div>
 
 
@@ -284,7 +227,6 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
             <div class="mirror-message-progress"><div id="mirror-message-progress-bar"></div></div>
         </div>
     </div>
-    <div id="mirror-toast"></div>
 
     <div class="mirror-container">
         
@@ -297,12 +239,23 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
             <img id="animated-cover-img" class="animated-cover-img" src="" alt="Capa Animada">
         </div>
 
+        <!-- NOVO: CAPA + PROGRESSO -->
+        <div id="progress-player-wrapper" class="progress-player-wrapper hidden-center">
+            <div id="progress-cover-glow" class="progress-cover-glow">
+                <img id="progress-cover-img" class="progress-cover" src="" alt="Capa com Progresso">
+            </div>
+            <div class="progress-ui">
+                <div id="progress-current" class="time-text">0:00</div>
+                <div class="progress-bar-bg"><div id="progress-fill" class="progress-bar-fill"></div></div>
+                <div id="progress-total" class="time-text">0:00</div>
+            </div>
+        </div>
+
         <div id="turntable-wrapper" class="turntable-wrapper hidden-center">
             <div class="vinyl-record">
                 <img id="vinyl-cover" class="vinyl-cover" src="" alt="">
                 <div class="vinyl-hole"></div>
             </div>
-            
             <svg viewBox="0 0 150 420" class="tonearm" xmlns="http://www.w3.org/2000/svg">
                 <defs><linearGradient id="metal-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#888"/><stop offset="30%" stop-color="#fff"/><stop offset="70%" stop-color="#ccc"/><stop offset="100%" stop-color="#666"/></linearGradient></defs>
                 <circle cx="75" cy="75" r="50" fill="#151515" stroke="#333" stroke-width="2"/>
@@ -346,17 +299,7 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
         import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
-        // SUAS CHAVES DO FIREBASE
-        const firebaseConfig = {
-            apiKey: "AIzaSyD9uRiFDp3WZEg9BHjpN9QBszL1L7zY6qc",
-            authDomain: "mirror-3bd2e.firebaseapp.com",
-            databaseURL: "https://mirror-3bd2e-default-rtdb.firebaseio.com",
-            projectId: "mirror-3bd2e",
-            storageBucket: "mirror-3bd2e.firebasestorage.app",
-            messagingSenderId: "172125779031",
-            appId: "1:172125779031:web:1bb19ae1fe89d71cafdf12"
-        };
-
+        const firebaseConfig = { apiKey: "AIzaSyD9uRiFDp3WZEg9BHjpN9QBszL1L7zY6qc", authDomain: "mirror-3bd2e.firebaseapp.com", databaseURL: "https://mirror-3bd2e-default-rtdb.firebaseio.com", projectId: "mirror-3bd2e", storageBucket: "mirror-3bd2e.firebasestorage.app", messagingSenderId: "172125779031", appId: "1:172125779031:web:1bb19ae1fe89d71cafdf12" };
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
         const settingsRef = ref(db, 'mirror_config');
@@ -368,104 +311,44 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
 
         const defaultConfig = { 
             textScale: 115, iconScale: 115, spotifyScale: 100, vinylSize: 100, spotifyMode: 'standard', 
-            glassOpacity: 3, glassBlur: 10, cardRadius: 16, 
-            showTemp: true, showSpotify: true, showClock: true, showForecast: true, 
-            ecoMode: false, showBigClock: false, showFooter: true, photoInterval: 20,
-            message: { text: '', duration: 8, updatedAt: 0, id: 0, expiresAt: 0 } 
+            glassOpacity: 3, glassBlur: 10, cardRadius: 16, showTemp: true, showSpotify: true, 
+            showClock: true, showForecast: true, ecoMode: false, immersionMode: false, showBigClock: false, 
+            showFooter: true, photoInterval: 20, message: { text: '', duration: 8, updatedAt: 0, id: 0, expiresAt: 0 } 
         };
         
         let userSettings = defaultConfig;
-        let lastMessageId = null;
-        let messageTimer = null;
-        let messageProgressFrame = null;
+        let lastMessageId = null; let messageTimer = null; let messageProgressFrame = null;
+        let currentWeatherCode = 0; // Guardar clima para imersão
 
         function normalizeMessage(value) {
             const fallback = { text: '', duration: 8, updatedAt: 0, id: 0, expiresAt: 0 };
             if (!value || typeof value !== 'object') return fallback;
-            return {
-                text: String(value.text || '').trim(),
-                duration: Math.max(3, Math.min(86400, Number(value.duration) || 8)),
-                updatedAt: Number(value.updatedAt) || 0,
-                id: Number(value.id) || 0,
-                expiresAt: Number(value.expiresAt) || 0
-            };
+            return { text: String(value.text || '').trim(), duration: Math.max(3, Math.min(86400, Number(value.duration) || 8)), updatedAt: Number(value.updatedAt) || 0, id: Number(value.id) || 0, expiresAt: Number(value.expiresAt) || 0 };
         }
 
         function showMirrorMessage(payload) {
             const msg = normalizeMessage(payload);
             if (!msg.id || msg.id === lastMessageId) return;
             lastMessageId = msg.id;
-
-            clearTimeout(messageTimer);
-            cancelAnimationFrame(messageProgressFrame);
-
-            const layer = document.getElementById('mirror-message-layer');
-            const text = document.getElementById('mirror-message-text');
-            const bar = document.getElementById('mirror-message-progress-bar');
-
-            if (!msg.text) {
-                layer.classList.remove('visible');
-                document.body.classList.remove('message-soft-dim');
-                bar.style.transform = 'scaleX(0)';
-                return;
-            }
-
-            const now = Date.now();
-            const fallbackExpires = (msg.updatedAt || now) + (msg.duration * 1000);
-            const expiresAt = msg.expiresAt > 0 ? msg.expiresAt : fallbackExpires;
-            const remaining = Math.max(0, expiresAt - now);
-
-            if (remaining <= 0) {
-                layer.classList.remove('visible');
-                document.body.classList.remove('message-soft-dim');
-                bar.style.transform = 'scaleX(0)';
-                return;
-            }
-
-            text.textContent = msg.text;
-            layer.classList.add('visible');
-            document.body.classList.add('message-soft-dim');
-
+            clearTimeout(messageTimer); cancelAnimationFrame(messageProgressFrame);
+            const layer = document.getElementById('mirror-message-layer'), text = document.getElementById('mirror-message-text'), bar = document.getElementById('mirror-message-progress-bar');
+            if (!msg.text) { layer.classList.remove('visible'); document.body.classList.remove('message-soft-dim'); bar.style.transform = 'scaleX(0)'; return; }
+            const now = Date.now(), fallbackExpires = (msg.updatedAt || now) + (msg.duration * 1000), expiresAt = msg.expiresAt > 0 ? msg.expiresAt : fallbackExpires, remaining = Math.max(0, expiresAt - now);
+            if (remaining <= 0) { layer.classList.remove('visible'); document.body.classList.remove('message-soft-dim'); bar.style.transform = 'scaleX(0)'; return; }
+            text.textContent = msg.text; layer.classList.add('visible'); document.body.classList.add('message-soft-dim');
             const total = Math.max(1, expiresAt - (msg.updatedAt || now));
-            const started = now;
-            const initialRemaining = remaining;
-
             function tick() {
-                const left = Math.max(0, expiresAt - Date.now());
-                const ratio = Math.max(0, Math.min(1, left / total));
-                bar.style.transform = `scaleX(${ratio})`;
-                if (left > 0) {
-                    messageProgressFrame = requestAnimationFrame(tick);
-                }
+                const left = Math.max(0, expiresAt - Date.now()); bar.style.transform = `scaleX(${Math.max(0, Math.min(1, left / total))})`;
+                if (left > 0) messageProgressFrame = requestAnimationFrame(tick);
             }
             tick();
-
-            messageTimer = setTimeout(() => {
-                layer.classList.remove('visible');
-                document.body.classList.remove('message-soft-dim');
-                bar.style.transform = 'scaleX(0)';
-                cancelAnimationFrame(messageProgressFrame);
-            }, initialRemaining + 50);
-        }
-
-        function showMirrorToast(text) {
-            const toast = document.getElementById('mirror-toast');
-            if (!toast) return;
-            toast.textContent = text;
-            toast.classList.add('show');
-            clearTimeout(toast._timer);
-            toast._timer = setTimeout(() => toast.classList.remove('show'), 2200);
+            messageTimer = setTimeout(() => { layer.classList.remove('visible'); document.body.classList.remove('message-soft-dim'); bar.style.transform = 'scaleX(0)'; cancelAnimationFrame(messageProgressFrame); }, remaining + 50);
         }
 
         onValue(settingsRef, (snapshot) => {
             const data = snapshot.val();
-            if (data) {
-                userSettings = { ...defaultConfig, ...data }; 
-                applySettings();
-                if (data.message) showMirrorMessage(data.message);
-            } else {
-                set(settingsRef, defaultConfig);
-            }
+            if (data) { userSettings = { ...defaultConfig, ...data }; applySettings(); if (data.message) showMirrorMessage(data.message); } 
+            else set(settingsRef, defaultConfig);
         });
 
         function applySettings() {
@@ -477,96 +360,60 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
             document.documentElement.style.setProperty('--glass-blur-val', userSettings.glassBlur + 'px');
             document.documentElement.style.setProperty('--card-radius', userSettings.cardRadius + 'px');
 
-            toggleElementVisibility('module-temp', userSettings.showTemp);
-            toggleElementVisibility('spotify-widget', userSettings.showSpotify);
-            toggleElementVisibility('module-clock', userSettings.showClock);
-            toggleElementVisibility('forecast-container', userSettings.showForecast);
-            toggleElementVisibility('card-main', userSettings.showFooter !== false);
-            toggleElementVisibility('forecast-container', userSettings.showFooter !== false && userSettings.showForecast);
-            
+            toggleElementVisibility('module-temp', userSettings.showTemp); toggleElementVisibility('spotify-widget', userSettings.showSpotify);
+            toggleElementVisibility('module-clock', userSettings.showClock); toggleElementVisibility('forecast-container', userSettings.showForecast);
+            toggleElementVisibility('card-main', userSettings.showFooter !== false); toggleElementVisibility('forecast-container', userSettings.showFooter !== false && userSettings.showForecast);
             toggleElementVisibility('big-clock-container', userSettings.showBigClock);
-            
             userSettings.ecoMode ? document.body.classList.add('eco-mode') : document.body.classList.remove('eco-mode');
 
             const spotifyWidget = document.getElementById('spotify-widget');
             userSettings.spotifyMode === 'large-cover' ? spotifyWidget.classList.add('large-cover-mode') : spotifyWidget.classList.remove('large-cover-mode');
-
-            if (userSettings.spotifyMode !== 'vinyl' && userSettings.spotifyMode !== 'animated') hideCenterExtras();
+            if (!['vinyl', 'animated', 'animated-progress'].includes(userSettings.spotifyMode)) hideCenterExtras();
+            
+            updateImmersionEffect();
         }
 
-        function toggleElementVisibility(id, isVisible) {
-            const el = document.getElementById(id);
-            if (el) isVisible ? el.classList.remove('config-hidden') : el.classList.add('config-hidden');
-        }
-
+        function toggleElementVisibility(id, isVisible) { const el = document.getElementById(id); if (el) isVisible ? el.classList.remove('config-hidden') : el.classList.add('config-hidden'); }
         function hideCenterExtras() {
             document.getElementById('bg-spotify').classList.remove('active');
-            
-            const turntable = document.getElementById('turntable-wrapper');
-            turntable.classList.remove('playing');
-            turntable.classList.add('hidden-center');
-            
-            const animatedCover = document.getElementById('animated-cover-wrapper');
-            animatedCover.classList.add('hidden-center');
+            const turntable = document.getElementById('turntable-wrapper'); turntable.classList.remove('playing'); turntable.classList.add('hidden-center');
+            document.getElementById('animated-cover-wrapper').classList.add('hidden-center');
+            document.getElementById('progress-player-wrapper').classList.add('hidden-center');
         }
 
-
-        function updateClocks() {
-            const now = new Date();
-            const h = String(now.getHours()).padStart(2, '0');
-            const m = String(now.getMinutes()).padStart(2, '0');
+        /* ----- CLIMA E IMERSÃO ----- */
+        function updateImmersionEffect() {
+            const layer = document.getElementById('weather-effect-layer');
+            layer.className = 'weather-overlay'; // reseta classes
+            if (!userSettings.immersionMode) { layer.classList.remove('active'); return; }
             
-            const daysShort = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
-            const daysLong = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
-            const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-
-            document.getElementById('mini-clock').textContent = `${h}:${m} • ${daysShort[now.getDay()]}, ${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}`;
-            document.getElementById('big-clock-time').textContent = `${h}:${m}`;
-            document.getElementById('big-clock-date').textContent = `${daysLong[now.getDay()]}, ${now.getDate()} de ${months[now.getMonth()]}`;
+            // Map de WMO Weather codes
+            const c = currentWeatherCode;
+            let effect = '';
+            if ([51,53,55,61,63,65,80,81,82].includes(c)) effect = 'rain'; // Chuva
+            else if ([71,73,75,77,85,86].includes(c)) effect = 'snow'; // Neve
+            else if ([45,48].includes(c)) effect = 'fog'; // Neblina
             
+            if (effect) { layer.classList.add(effect, 'active'); }
         }
-        setInterval(updateClocks, 1000); updateClocks();
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                clearTimeout(messageTimer);
-                cancelAnimationFrame(messageProgressFrame);
-                document.getElementById('mirror-message-layer')?.classList.remove('visible');
-                document.body.classList.remove('message-soft-dim');
-            }
-        });
-
-
-        window.mirrorRemoteAction = async function(action) {
-            try {
-                if (action === 'ecoToggle') {
-                    const next = !Boolean(userSettings.ecoMode);
-                    await set(settingsRef, { ...userSettings, ecoMode: next });
-                    showMirrorToast(next ? 'Modo eco ativado' : 'Modo eco desativado');
-                }
-                if (action === 'messageClear') {
-                    const next = { ...userSettings, message: { text: '', duration: 2, updatedAt: Date.now(), id: Date.now(), expiresAt: Date.now() } };
-                    await set(settingsRef, next);
-                }
-            } catch (e) {}
-        };
 
         let isFetchingWeather = false, lastWeatherHash = ""; 
         async function fetchWeather() {
-            if (!userSettings.showTemp && !userSettings.showForecast) return;
-            if (!navigator.onLine || isFetchingWeather) return; 
-            isFetchingWeather = true;
+            if (!userSettings.showTemp && !userSettings.showForecast && !userSettings.immersionMode) return;
+            if (!navigator.onLine || isFetchingWeather) return; isFetchingWeather = true;
             try {
                 const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.latitude}&longitude=${CONFIG.longitude}&current=temperature_2m,wind_speed_10m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`);
                 const data = await res.json();
-                const currentHash = `${data.current.temperature_2m}-${data.current.weather_code}`;
-                if (currentHash === lastWeatherHash) return; 
-                lastWeatherHash = currentHash;
-                const weatherIcons = { 0: 'fa-sun', 1: 'fa-cloud-sun', 2: 'fa-cloud-sun', 3: 'fa-cloud', 45: 'fa-smog', 51: 'fa-cloud-rain', 61: 'fa-cloud-showers-heavy', 95: 'fa-bolt' };
+                currentWeatherCode = data.current.weather_code; // Salva para imersão
+                updateImmersionEffect(); // Atualiza caso imersão esteja ON
+                
+                const currentHash = `${data.current.temperature_2m}-${currentWeatherCode}`;
+                if (currentHash === lastWeatherHash) return; lastWeatherHash = currentHash;
+                const weatherIcons = { 0: 'fa-sun', 1: 'fa-cloud-sun', 2: 'fa-cloud-sun', 3: 'fa-cloud', 45: 'fa-smog', 51: 'fa-cloud-rain', 61: 'fa-cloud-showers-heavy', 71: 'fa-snowflake', 95: 'fa-bolt' };
                 document.getElementById('current-temp').textContent = `${Math.round(data.current.temperature_2m)}°`;
                 document.getElementById('wind-speed').innerHTML = `<i class="fa-solid fa-wind"></i> ${Math.round(data.current.wind_speed_10m)} km/h`;
                 document.getElementById('city-name').textContent = CONFIG.cityName;
-                document.getElementById('current-icon').className = `fa-solid ${weatherIcons[data.current.weather_code] || 'fa-cloud'}`;
+                document.getElementById('current-icon').className = `fa-solid ${weatherIcons[currentWeatherCode] || 'fa-cloud'}`;
                 let gridHtml = ''; const days = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
                 for (let i = 0; i < 4; i++) {
                     const d = new Date(data.daily.time[i] + 'T00:00:00');
@@ -577,40 +424,66 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
         }
         fetchWeather(); setInterval(fetchWeather, 1800000); 
 
+        /* ----- FOTOS ----- */
         const SCRIPT_FOTOS_URL = 'https://script.google.com/macros/s/AKfycbxnRyy5pi0OAlw15YslCA4EqDMPcGVd0vFFv3I7U35AE0bNSfWPn8keRymfGKbY0eQ/exec';
         let photoList = [], currentPhotoIndex = 0, activeBgIndex = 1, isFetchingPhotos = false;
         async function fetchDrivePhotos() {
-            if (!navigator.onLine || isFetchingPhotos) return;
-            isFetchingPhotos = true;
+            if (!navigator.onLine || isFetchingPhotos) return; isFetchingPhotos = true;
             try {
                 const res = await fetch(`${SCRIPT_FOTOS_URL}?nocache=${new Date().getTime()}`, { redirect: 'follow' });
                 const photos = await res.json();
-                if (Array.isArray(photos) && photos.length > 0) {
-                    photoList = photos;
-                    if (!document.getElementById('bg1').style.backgroundImage) preloadNextBackground();
-                }
+                if (Array.isArray(photos) && photos.length > 0) { photoList = photos; if (!document.getElementById('bg1').style.backgroundImage) preloadNextBackground(); }
             } catch (err) {} finally { isFetchingPhotos = false; }
         }
         function preloadNextBackground() {
             if (photoList.length === 0) return;
-            const photoUrl = photoList[currentPhotoIndex];
-            const nextBgId = activeBgIndex === 1 ? 'bg2' : 'bg1', currentBgId = activeBgIndex === 1 ? 'bg1' : 'bg2';
-            const nextBgEl = document.getElementById(nextBgId), currentBgEl = document.getElementById(currentBgId);
+            const photoUrl = photoList[currentPhotoIndex], nextBgId = activeBgIndex === 1 ? 'bg2' : 'bg1', currentBgId = activeBgIndex === 1 ? 'bg1' : 'bg2', nextBgEl = document.getElementById(nextBgId), currentBgEl = document.getElementById(currentBgId);
             const img = new Image(); img.referrerPolicy = "no-referrer";
             img.onload = () => { nextBgEl.style.backgroundImage = `url('${photoUrl}')`; nextBgEl.classList.add('active'); currentBgEl.classList.remove('active'); activeBgIndex = activeBgIndex === 1 ? 2 : 1; currentPhotoIndex = (currentPhotoIndex + 1) % photoList.length; };
             img.onerror = () => { currentPhotoIndex = (currentPhotoIndex + 1) % photoList.length; preloadNextBackground(); }; img.src = photoUrl;
         }
-        fetchDrivePhotos();
-        let photoTimer = null;
-        function schedulePhotoAdvance() {
-            clearTimeout(photoTimer);
-            const seconds = Math.max(10, Math.min(180, Number(userSettings.photoInterval) || 20));
-            photoTimer = setTimeout(() => { preloadNextBackground(); schedulePhotoAdvance(); }, seconds * 1000);
-        }
-        schedulePhotoAdvance();
-        setInterval(fetchDrivePhotos, 21600000); 
+        fetchDrivePhotos(); let photoTimer = null;
+        function schedulePhotoAdvance() { clearTimeout(photoTimer); const seconds = Math.max(10, Math.min(180, Number(userSettings.photoInterval) || 20)); photoTimer = setTimeout(() => { preloadNextBackground(); schedulePhotoAdvance(); }, seconds * 1000); }
+        schedulePhotoAdvance(); setInterval(fetchDrivePhotos, 21600000); 
 
+        /* ----- RELÓGIOS ----- */
+        function updateClocks() {
+            const now = new Date(), h = String(now.getHours()).padStart(2, '0'), m = String(now.getMinutes()).padStart(2, '0');
+            const daysShort = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'], daysLong = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'], months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+            document.getElementById('mini-clock').textContent = `${h}:${m} • ${daysShort[now.getDay()]}, ${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}`;
+            document.getElementById('big-clock-time').textContent = `${h}:${m}`; document.getElementById('big-clock-date').textContent = `${daysLong[now.getDay()]}, ${now.getDate()} de ${months[now.getMonth()]}`;
+        }
+        setInterval(updateClocks, 1000); updateClocks();
+
+        /* ----- SPOTIFY & PROGRESSO ----- */
         let isFetchingSpotify = false, lastSongTitle = ""; 
+        let trackDuration = 1000, trackProgress = 0, isPlayingMusic = false; // Controle de Progresso
+        
+        // Timer suave para animar barra de progresso entre as requisições API
+        setInterval(() => {
+            if (isPlayingMusic && userSettings.spotifyMode === 'animated-progress') {
+                trackProgress += 1000;
+                if (trackProgress > trackDuration) trackProgress = trackDuration;
+                updateProgressBarUI();
+            }
+        }, 1000);
+        
+        function formatMsToTime(ms) {
+            const totalSec = Math.floor(ms / 1000);
+            const min = Math.floor(totalSec / 60);
+            const sec = String(totalSec % 60).padStart(2, '0');
+            return `${min}:${sec}`;
+        }
+        
+        function updateProgressBarUI() {
+            const fill = document.getElementById('progress-fill');
+            const current = document.getElementById('progress-current');
+            const pct = Math.min(100, (trackProgress / trackDuration) * 100);
+            fill.style.width = `${pct}%`;
+            current.textContent = formatMsToTime(trackProgress);
+            document.getElementById('progress-total').textContent = formatMsToTime(trackDuration);
+        }
+
         async function getSpotifyToken() {
             const cachedToken = localStorage.getItem('spotify_access_token'), tokenExp = localStorage.getItem('spotify_token_exp');
             if (cachedToken && tokenExp && new Date().getTime() < parseInt(tokenExp)) return cachedToken;
@@ -632,12 +505,16 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
                 if (!token) { widget.classList.add('hidden'); hideCenterExtras(); return; }
                 const res = await fetch('https://api.spotify.com/v1/me/player/currently-playing', { headers: { 'Authorization': `Bearer ${token}` } });
                 
-                if (res.status === 204 || res.status > 300) { widget.classList.add('hidden'); lastSongTitle = ""; hideCenterExtras(); isFetchingSpotify = false; return; }
+                if (res.status === 204 || res.status > 300) { isPlayingMusic = false; widget.classList.add('hidden'); lastSongTitle = ""; hideCenterExtras(); isFetchingSpotify = false; return; }
                 const data = await res.json();
                 
                 if (data && data.is_playing && data.item) {
-                    const coverUrl = data.item.album.images[0] ? data.item.album.images[0].url : '';
+                    isPlayingMusic = true;
+                    trackProgress = data.progress_ms;
+                    trackDuration = data.item.duration_ms;
+                    updateProgressBarUI(); // Sincroniza estado exato
                     
+                    const coverUrl = data.item.album.images[0] ? data.item.album.images[0].url : '';
                     if (data.item.name !== lastSongTitle) { 
                         document.getElementById('spotify-cover').src = coverUrl; 
                         document.getElementById('spotify-title').textContent = data.item.name; 
@@ -649,26 +526,29 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
                     const bgSpotify = document.getElementById('bg-spotify');
                     const turntable = document.getElementById('turntable-wrapper');
                     const animatedCover = document.getElementById('animated-cover-wrapper');
+                    const progressPlayer = document.getElementById('progress-player-wrapper');
 
                     if (userSettings.spotifyMode === 'vinyl') {
                         bgSpotify.style.backgroundImage = `url('${coverUrl}')`; bgSpotify.classList.add('active'); 
                         document.getElementById('vinyl-cover').src = coverUrl;
-                        animatedCover.classList.add('hidden-center');
-                        turntable.classList.remove('hidden-center'); 
-                        setTimeout(() => { turntable.classList.add('playing'); }, 50); 
+                        animatedCover.classList.add('hidden-center'); progressPlayer.classList.add('hidden-center');
+                        turntable.classList.remove('hidden-center'); setTimeout(() => { turntable.classList.add('playing'); }, 50); 
                     } 
                     else if (userSettings.spotifyMode === 'animated') {
                         bgSpotify.style.backgroundImage = `url('${coverUrl}')`; bgSpotify.classList.add('active'); 
                         document.getElementById('animated-cover-img').src = coverUrl;
-                        turntable.classList.remove('playing'); turntable.classList.add('hidden-center');
+                        turntable.classList.remove('playing'); turntable.classList.add('hidden-center'); progressPlayer.classList.add('hidden-center');
                         animatedCover.classList.remove('hidden-center');
                     } 
-                    else { 
-                        hideCenterExtras(); 
+                    else if (userSettings.spotifyMode === 'animated-progress') {
+                        bgSpotify.style.backgroundImage = `url('${coverUrl}')`; bgSpotify.classList.add('active'); 
+                        document.getElementById('progress-cover-img').src = coverUrl;
+                        document.getElementById('progress-cover-glow').style.backgroundImage = `url('${coverUrl}')`; // Para aura
+                        turntable.classList.remove('playing'); turntable.classList.add('hidden-center'); animatedCover.classList.add('hidden-center');
+                        progressPlayer.classList.remove('hidden-center');
                     }
-                } else { 
-                    widget.classList.add('hidden'); lastSongTitle = ""; hideCenterExtras(); 
-                }
+                    else { hideCenterExtras(); }
+                } else { isPlayingMusic = false; widget.classList.add('hidden'); lastSongTitle = ""; hideCenterExtras(); }
             } catch (err) { } finally { isFetchingSpotify = false; }
         }
         setInterval(checkSpotify, 8000); checkSpotify();
@@ -676,7 +556,6 @@ html,body{min-height:100%;background:var(--bg);color:#fff} body{padding:12px 10p
 </body>
 </html>
 </textarea>
-
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
@@ -686,7 +565,7 @@ const firebaseConfig={apiKey:"AIzaSyD9uRiFDp3WZEg9BHjpN9QBszL1L7zY6qc",authDomai
 const db=getDatabase(initializeApp(firebaseConfig));
 const settingsRef=ref(db,"mirror_config");
 
-const defaults={textScale:115,iconScale:115,spotifyScale:100,vinylSize:100,spotifyMode:"standard",glassOpacity:3,glassBlur:10,cardRadius:16,showTemp:true,showSpotify:true,showClock:true,showForecast:true,ecoMode:false,showBigClock:false,showFooter:true,photoInterval:20,message:{text:"",duration:8,updatedAt:0,id:0,expiresAt:0}};
+const defaults={textScale:115,iconScale:115,spotifyScale:100,vinylSize:100,spotifyMode:"standard",glassOpacity:3,glassBlur:10,cardRadius:16,showTemp:true,showSpotify:true,showClock:true,showForecast:true,ecoMode:false,immersionMode:false,showBigClock:false,showFooter:true,photoInterval:20,message:{text:"",duration:8,updatedAt:0,id:0,expiresAt:0}};
 const $=id=>document.getElementById(id);
 let state={...defaults,message:{...defaults.message}},ready=false,writeTimer=null;
 
@@ -714,47 +593,27 @@ function startMessageCountdown(message){
   const el=$("message-countdown");
   const statusEl=$("message-status");
   const now = Date.now();
-  
-  if(!message?.text || (message.expiresAt && now >= message.expiresAt)){
-      el.textContent='—';
-      return;
-  }
-  
+  if(!message?.text || (message.expiresAt && now >= message.expiresAt)){ el.textContent='—'; return; }
   const expiresAt=Number(message.expiresAt)||((Number(message.updatedAt)||now)+(Number(message.duration)||8)*1000);
-  
   function tick(){
     const left=expiresAt-Date.now();
-    if(left>0){
-        el.textContent=`resta ${formatRemaining(left)}`;
-    } else {
-        clearInterval(countdownTimer);
-        el.textContent='—';
-        statusEl.textContent="Nenhuma mensagem ativa";
-    }
+    if(left>0){ el.textContent=`resta ${formatRemaining(left)}`; } 
+    else { clearInterval(countdownTimer); el.textContent='—'; statusEl.textContent="Nenhuma mensagem ativa"; }
   }
-  tick(); 
-  countdownTimer=setInterval(tick,1000);
+  tick(); countdownTimer=setInterval(tick,1000);
 }
 
-function durationParts(seconds){
-  seconds=Number(seconds)||8;
-  if(seconds%3600===0 && seconds>=3600) return ['hours',seconds/3600];
-  if(seconds%60===0 && seconds>=60) return ['minutes',seconds/60];
-  return ['seconds',seconds];
-}
-function durationToSeconds(unit,value){
-  value=Number(value)||1;
-  if(unit==='hours') return clamp(value*3600,3,86400);
-  if(unit==='minutes') return clamp(value*60,3,86400);
-  return clamp(value,3,60);
-}
+function durationParts(seconds){ seconds=Number(seconds)||8; if(seconds%3600===0 && seconds>=3600) return ['hours',seconds/3600]; if(seconds%60===0 && seconds>=60) return ['minutes',seconds/60]; return ['seconds',seconds]; }
+function durationToSeconds(unit,value){ value=Number(value)||1; if(unit==='hours') return clamp(value*3600,3,86400); if(unit==='minutes') return clamp(value*60,3,86400); return clamp(value,3,60); }
 
 function updateUI(s){
   $("eco-state").textContent=s.ecoMode?"ON":"OFF";$("quick-eco").classList.toggle("active",!!s.ecoMode);
+  $("immersion-state").textContent=s.immersionMode?"ON":"OFF";$("quick-immersion").classList.toggle("active",!!s.immersionMode);
   $("clock-state").textContent=s.showClock===false?"OFF":"ON";$("quick-clock").classList.toggle("active",s.showClock!==false);
   $("footer-state").textContent=s.showFooter===false?"OFF":"ON";$("quick-footer").classList.toggle("active",s.showFooter!==false);
   $("bigclock-state").textContent=s.showBigClock?"ON":"OFF";$("quick-bigclock").classList.toggle("active",!!s.showBigClock);
-  const centers={standard:"Somente barra",vinyl:"Toca-discos",animated:"Capa animada","large-cover":"Card lateral"};
+  
+  const centers={standard:"Somente barra",vinyl:"Toca-discos",animated:"Capa animada","animated-progress":"Capa + Progresso","large-cover":"Card lateral"};
   $("sum-clock").textContent=s.showClock===false?"Oculto":(s.showBigClock?"Visível • hora grande":"Visível");
   $("sum-center").textContent=centers[s.spotifyMode]||"Somente barra";
   const parts=[];if(s.showTemp)parts.push("Clima");if(s.showSpotify)parts.push("Spotify");if(s.showClock)parts.push("hora");$("sum-footer").textContent=s.showFooter===false?"Oculta":(parts.join(" • ")||"Sem módulos");
@@ -764,83 +623,33 @@ function updateUI(s){
   
   const msg=normalizeMessage(s.message);
   const isExpired = msg.expiresAt && Date.now() >= msg.expiresAt;
-  
-  if(msg.text && !isExpired){
-      $("message-status").textContent=`Mensagem ativa • ${formatDuration(msg.duration)}`;
-  }else{
-      $("message-status").textContent="Nenhuma mensagem ativa";
-  }
-  
-  startMessageCountdown(msg);
-  $("char-count").textContent=$("message-input").value.length;
+  $("message-status").textContent=(msg.text && !isExpired)?`Mensagem ativa • ${formatDuration(msg.duration)}`:"Nenhuma mensagem ativa";
+  startMessageCountdown(msg); $("char-count").textContent=$("message-input").value.length;
 }
 
 function savePatch(patch){state={...state,...patch};updateUI(state);clearTimeout(writeTimer);writeTimer=setTimeout(async()=>{try{await set(settingsRef,state);}catch(e){toast("Erro ao salvar");}},80);}
 async function saveMessage(message){state={...state,message};updateUI(state);try{await set(settingsRef,state);toast("Mensagem enviada");}catch(e){toast("Erro ao enviar");}}
 
-function loadMirrorPreview() {
-  const rawHtml = document.getElementById('embedded-mirror-code').value;
-  document.getElementById('mirror-preview').srcdoc = rawHtml;
-}
+function loadMirrorPreview() { document.getElementById('mirror-preview').srcdoc = document.getElementById('embedded-mirror-code').value; }
 loadMirrorPreview();
 
-onValue(settingsRef,snap=>{
-  const data=snap.val();
-  if(data){state=normalizeState(data);ready=true;updateUI(state);syncDurationUI(normalizeMessage(state.message).duration);$("status").classList.add("ok");$("status").innerHTML='<i class="fa-solid fa-circle"></i><span>conectado</span>';}else set(settingsRef,defaults);
-});
+onValue(settingsRef,snap=>{ const data=snap.val(); if(data){state=normalizeState(data);ready=true;updateUI(state);syncDurationUI(normalizeMessage(state.message).duration);$("status").classList.add("ok");$("status").innerHTML='<i class="fa-solid fa-circle"></i><span>conectado</span>';}else set(settingsRef,defaults); });
 
 $("message-input").addEventListener("input",()=>$("char-count").textContent=$("message-input").value.length);
 $("message-input").addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="Enter"){e.preventDefault();$("send-message").click();}});
 
-function syncDurationUI(seconds){
-  const [unit,val]=durationParts(seconds);
-  $("duration-unit").value=unit;
-  const slider=$("message-duration");
-  slider.max=unit==='hours'?24:(unit==='minutes'?60:60);
-  slider.min=unit==='seconds'?3:1;
-  slider.value=val;
-  $("duration-value").textContent=formatDuration(seconds);
-}
-
+function syncDurationUI(seconds){ const [unit,val]=durationParts(seconds); $("duration-unit").value=unit; const slider=$("message-duration"); slider.max=unit==='hours'?24:(unit==='minutes'?60:60); slider.min=unit==='seconds'?3:1; slider.value=val; $("duration-value").textContent=formatDuration(seconds); }
 function currentDuration(){return durationToSeconds($("duration-unit").value,$("message-duration").value);}
 
-$("duration-unit").addEventListener("change",()=>{
-  const unit=$("duration-unit").value;
-  const slider=$("message-duration");
-  if(unit==='hours'){slider.min=1;slider.max=24;slider.value=1;}
-  else if(unit==='minutes'){slider.min=1;slider.max=60;slider.value=1;}
-  else {slider.min=3;slider.max=60;slider.value=3;}
-  const sec=currentDuration(); $("duration-value").textContent=formatDuration(sec);
-});
+$("duration-unit").addEventListener("change",()=>{ const unit=$("duration-unit").value; const slider=$("message-duration"); if(unit==='hours'){slider.min=1;slider.max=24;slider.value=1;} else if(unit==='minutes'){slider.min=1;slider.max=60;slider.value=1;} else {slider.min=3;slider.max=60;slider.value=3;} $("duration-value").textContent=formatDuration(currentDuration()); });
+$("message-duration").addEventListener("input",e=>{ $("duration-value").textContent=formatDuration(currentDuration()); });
 
-$("message-duration").addEventListener("input",e=>{
-  const sec=currentDuration(); $("duration-value").textContent=formatDuration(sec);
-});
-
-$("send-message").onclick=async()=>{
-  const text=$("message-input").value.trim();
-  if(!text){toast("Escreva uma mensagem");$("message-input").focus();return;}
-  const duration=currentDuration(),id=Date.now(),now=Date.now();
-  
-  // Limpa o campo instantaneamente e zera o contador
-  $("message-input").value = "";
-  $("char-count").textContent = "0";
-  
-  await saveMessage({text,duration,updatedAt:now,id,expiresAt:now+duration*1000});
-};
-
-$("clear-message").onclick=async()=>{
-  const id=Date.now();
-  try{
-    await saveMessage({text:"",duration:3,updatedAt:id,id,expiresAt:id});
-    $("message-input").value="";
-    $("char-count").textContent="0";
-    toast("Mensagem apagada");
-  }catch(e){}
-};
+$("send-message").onclick=async()=>{ const text=$("message-input").value.trim(); if(!text){toast("Escreva uma mensagem");$("message-input").focus();return;} const duration=currentDuration(),id=Date.now(),now=Date.now(); $("message-input").value = ""; $("char-count").textContent = "0"; await saveMessage({text,duration,updatedAt:now,id,expiresAt:now+duration*1000}); };
+$("clear-message").onclick=async()=>{ const id=Date.now(); try{ await saveMessage({text:"",duration:3,updatedAt:id,id,expiresAt:id}); $("message-input").value=""; $("char-count").textContent="0"; toast("Mensagem apagada"); }catch(e){} };
 
 async function setQuick(key,value,label){savePatch({[key]:value});toast(label);}
 $("quick-eco").onclick=()=>setQuick("ecoMode",!state.ecoMode,state.ecoMode?"Modo Eco desativado":"Modo Eco ativado");
+$("quick-immersion").onclick=()=>setQuick("immersionMode",!state.immersionMode,state.immersionMode?"Imersão desativada":"Imersão ativada");
 $("quick-clock").onclick=()=>setQuick("showClock",state.showClock===false,"Relógio "+(state.showClock===false?"ativado":"ocultado"));
 $("quick-footer").onclick=()=>setQuick("showFooter",state.showFooter===false,"Barra inferior "+(state.showFooter===false?"exibida":"ocultada"));
 $("quick-bigclock").onclick=()=>setQuick("showBigClock",!state.showBigClock,"Hora grande "+(!state.showBigClock?"ativada":"desativada"));
@@ -850,7 +659,7 @@ function openSheet(kind){
   if(kind==="clock"){
     title.textContent="Relógio";html=`<div class="switch-row"><div class="copy"><b>Relógio da barra</b><span>Mostra hora e data no Mirror</span></div><label class="switch"><input id="s-clock" type="checkbox" ${state.showClock!==false?"checked":""}><span class="switch-ui"></span></label></div><div class="switch-row"><div class="copy"><b>Hora grande</b><span>Relógio destacado no topo</span></div><label class="switch"><input id="s-big" type="checkbox" ${state.showBigClock?"checked":""}><span class="switch-ui"></span></label></div>`;
   } else if(kind==="center"){
-    title.textContent="Spotify & centro";html=`<div class="field"><div class="field-label"><span>Visualização central</span></div><div class="choices"><button class="choice" data-center="standard"><b>Somente barra</b><span>Sem elemento central</span></button><button class="choice" data-center="vinyl"><b>Toca-discos</b><span>Vinil girando</span></button><button class="choice" data-center="animated"><b>Capa animada</b><span>Capa flutuando</span></button><button class="choice" data-center="large-cover"><b>Card lateral</b><span>Destaque do player</span></button></div></div><div class="field"><div class="field-label"><span>Tamanho da capa / vinil</span><span class="field-value" id="v-vinyl">${state.vinylSize}%</span></div><input id="s-vinyl" class="range" type="range" min="60" max="180" value="${state.vinylSize}"></div><div class="switch-row"><div class="copy"><b>Spotify na barra</b><span>Mostrar ou ocultar o mini player</span></div><label class="switch"><input id="s-spotify" type="checkbox" ${state.showSpotify!==false?"checked":""}><span class="switch-ui"></span></label></div>`;
+    title.textContent="Spotify & centro";html=`<div class="field"><div class="field-label"><span>Visualização central</span></div><div class="choices"><button class="choice" data-center="standard"><b>Somente barra</b><span>Sem elemento central</span></button><button class="choice" data-center="vinyl"><b>Toca-discos</b><span>Vinil girando</span></button><button class="choice" data-center="animated"><b>Capa animada</b><span>Capa flutuando</span></button><button class="choice" data-center="animated-progress"><b>Capa + Progresso</b><span>Capa e tempo da música</span></button><button class="choice" style="grid-column: span 2;" data-center="large-cover"><b>Card lateral</b><span>Destaque do player</span></button></div></div><div class="field"><div class="field-label"><span>Tamanho da capa / vinil</span><span class="field-value" id="v-vinyl">${state.vinylSize}%</span></div><input id="s-vinyl" class="range" type="range" min="60" max="180" value="${state.vinylSize}"></div><div class="switch-row"><div class="copy"><b>Spotify na barra</b><span>Mostrar ou ocultar o mini player</span></div><label class="switch"><input id="s-spotify" type="checkbox" ${state.showSpotify!==false?"checked":""}><span class="switch-ui"></span></label></div>`;
   } else if(kind==="footer"){
     title.textContent="Barra inferior";html=`<div class="switch-row"><div class="copy"><b>Barra inferior</b><span>Área principal de módulos</span></div><label class="switch"><input id="s-footer" type="checkbox" ${state.showFooter!==false?"checked":""}><span class="switch-ui"></span></label></div><div class="switch-row"><div class="copy"><b>Clima atual</b><span>Temperatura e ícone</span></div><label class="switch"><input id="s-temp" type="checkbox" ${state.showTemp?"checked":""}><span class="switch-ui"></span></label></div><div class="switch-row"><div class="copy"><b>Mini relógio</b><span>Hora/data dentro da barra</span></div><label class="switch"><input id="s-mini" type="checkbox" ${state.showClock!==false?"checked":""}><span class="switch-ui"></span></label></div><div class="switch-row"><div class="copy"><b>Previsão 4 dias</b><span>Cards abaixo da barra</span></div><label class="switch"><input id="s-forecast" type="checkbox" ${state.showForecast?"checked":""}><span class="switch-ui"></span></label></div>`;
   } else if(kind==="glass"){
